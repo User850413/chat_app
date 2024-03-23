@@ -1,5 +1,6 @@
 :root {
   --white: #fff;
+  --white50: rgba(255, 255, 255, 0.5);
   --bg-move-width: 440px;
   --bg-move-height: -390px;
   --bg-gradient: linear-gradient(
@@ -15,6 +16,7 @@
 body {
   background-color: hsl(270, 20%, 98%);
 }
+
 .wrap {
   height: 100vh;
   position: relative;
@@ -31,31 +33,209 @@ body {
   flex-direction: row-reverse;
   justify-content: center;
 }
+
+/* 휴대폰 */
 .phone {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   background-color: var(--white);
   width: 330px;
   height: 670px;
   border-radius: 40px;
   box-shadow: 2px 2px 52px 0px rgba(0, 0, 0, 0.1);
-  padding: 12px;
   background-color: var(--light-grayish-violet);
-}
-.phone::after {
-  box-sizing: border-box;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 40px;
   border: 12px solid var(--white);
+  /* overflow: hidden; */
 }
 .phone__header {
   background: var(--bg-gradient);
-  padding: 30px 20px 10px;
+  padding: 22px 20px 10px;
+  position: relative;
+  border-radius: 28px 28px 10px 10px;
+  z-index: 5;
 }
+.phone__header::after {
+  content: "";
+  width: 170px;
+  height: 28px;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--white);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  position: absolute;
+}
+
+.phone__header-user {
+  display: grid;
+  grid-template-columns: 43px 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 13px 17px 0;
+}
+.phone__header-user img {
+  width: 33px;
+  height: 33px;
+  border-radius: 33px;
+  border: 2px solid var(--light-grayish-violet);
+  grid-row: 1/3;
+}
+.user__name {
+  color: var(--light-grayish-violet);
+  font-weight: 500;
+}
+.user__desc {
+  color: var(--white50);
+  font-size: 1rem;
+}
+
+.phone__header-operation {
+  z-index: 10;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  right: 23px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-grayish-violet);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.phone__main {
+  position: relative;
+  padding: 0 10px;
+  height: 100%;
+  width: 100%;
+  margin-top: -87px;
+  padding-bottom: 160px;
+}
+.main__bubbles {
+  position: relative;
+  margin-top: 95px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+.main__bubbles::-webkit-scrollbar {
+  width: 5px;
+  background: none;
+}
+.main__bubbles::-webkit-scrollbar-thumb {
+  height: 100%;
+  background-color: var(--bg-gradient);
+  border-radius: 5px;
+}
+.main__bubbles::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.bubble__you {
+  background-color: var(--dare-grayish-violet);
+  color: var(--very-dark-desaturated-violet);
+  width: fit-content;
+  max-width: 60%;
+  border-radius: 15px 15px 15px 5px;
+  padding: 8px 10px;
+}
+.bubble__me + .bubble__you {
+  margin-top: 10px;
+}
+.bubble__me {
+  margin-left: auto;
+  width: fit-content;
+  max-width: 60%;
+  background-color: var(--white);
+  border-radius: 15px 15px 5px 15px;
+  padding: 8px 10px;
+}
+.bubble__me-images {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  margin-top: 10px;
+}
+.bubble__me-images > div {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: contain;
+}
+.bubble__me-images > div:nth-child(1) {
+  background: url(../images/dog-image-1.jpg) no-repeat;
+}
+.bubble__me-images > div:nth-child(2) {
+  background: url(../images/dog-image-2.jpg) no-repeat;
+}
+.bubble__me-images > div:nth-child(3) {
+  background: url(../images/dog-image-3.jpg) no-repeat;
+}
+.bubble__walk {
+  background: var(--bg-gradient);
+  line-height: 44px;
+  border-radius: 15px 15px 15px 5px;
+  width: 75%;
+  color: var(--light-grayish-violet);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 37px;
+  position: relative;
+}
+.bubble__walk span:first-child {
+  font-weight: 200;
+}
+.bubble__walk span:last-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.bubble__walk::after {
+  content: "";
+  border: 1.5px solid var(--white50);
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  position: absolute;
+}
+.main__send {
+  height: 45px;
+  border-radius: 50px;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 8px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  padding-left: 15px;
+}
+.main__send input[type="text"]::placeholder {
+  font-size: 1.2rem;
+  color: var(--light-grayish-violet);
+}
+.main__send .btn {
+  background-color: var(--very-dark-desaturated-violet);
+  color: var(--white);
+  width: 31px;
+  height: 31px;
+  border-radius: 31px;
+}
+
+/* 화면 오른쪽 */
 .textarea {
   display: flex;
   flex-direction: column;
