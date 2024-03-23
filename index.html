@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/688304f15c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/index.css" />
@@ -30,33 +34,49 @@
         </div>
         <div class="phone">
           <div class="phone__header">
-            <div class="phone__header-user">Samuel Green</div>
-            <div class="phone__header-user-desc">Available to Walk</div>
+            <div class="phone__header-user">
+              <img src="images/avatar.jpg" alt="" />
+              <div class="user__name">Samuel Green</div>
+              <div class="user__desc">Available to Walk</div>
+            </div>
+            <div class="phone__header-operation">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </div>
           <div class="phone__main">
-            <div class="phone__bubble__you">
-              That sounds great. I’d be happy with that.
+            <div class="main__bubbles">
+              <div class="bubble__you">
+                That sounds great. I’d be happy with that.
+              </div>
+              <div class="bubble__you">
+                Could you send over some pictures of your dog, please?
+              </div>
+              <div class="bubble__me images">
+                <div class="b1" aria-label="a picture of a dog"></div>
+                <div class="b2" aria-label="a picture of a dog"></div>
+                <div class="b3" aria-label="a picture of a dog"></div>
+              </div>
+              <div class="bubble__me">
+                Here are a few pictures. She’s a happy girl!
+              </div>
+              <div class="bubble__me">Can you make it?</div>
+              <div class="bubble__you">
+                She looks so happy! The time we discussed works. How long shall
+                I take her out for?
+              </div>
+              <div class="bubble_walk">
+                <span>30 minute walk</span><span>$29</span>
+              </div>
+              <div class="bubble_walk">
+                <span>1 hour walk</span><span>$49</span>
+              </div>
             </div>
-            <div class="phone__bubble__you">
-              Could you send over some pictures of your dog, please?
-            </div>
-            <div class="phone__bubble__me">
-              Here are a few pictures. She’s a happy girl!
-            </div>
-            <div class="phone__bubble__me">Can you make it?</div>
-            <div class="phone__bubble__you">
-              She looks so happy! The time we discussed works. How long shall I
-              take her out for?
-            </div>
-            <div class="phone__bubble_walk">
-              <span>30 minute walk</span><span>$29</span>
-            </div>
-            <div class="phone__bubble_walk">
-              <span>1 hour walk</span><span>$49</span>
-            </div>
-            <div class="phone__main__send">
-              <span>Type a message…</span>
-              <a class="phone__send" href=""></a>
+            <div class="main__send">
+              <input type="text" placeholder="Type a message..." />
+              <button class="btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -73,3 +93,4 @@
     </footer>
   </body>
 </html>
+
