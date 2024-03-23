@@ -12,6 +12,7 @@
     - [향후 주목할 분야(NOTABLE POINT)](#향후-주목할-분야notable-point)
     - [참고 링크(LINKS)](#참고-링크links)
   - [작성자(AUTHOR)](#작성자author)
+- [chat\_app](#chat_app)
 
 ## 개요(SUMMARY)
 
@@ -21,11 +22,13 @@ The second challenge I started with [Frontend Mentor](https://www.frontendmentor
 
 ### 스크린샷(SCREENSHOT)
 
+![main image](/design/desktop-preview.jpg)
+
 ## 내 작업(MY WORK)
 
 ### 사용한 것(WHAT I USE)
 
--
+- CSS: transform: scale(-1)
 
 ### 배운 점(WHAT I LEARN)
 
@@ -35,7 +38,8 @@ The second challenge I started with [Frontend Mentor](https://www.frontendmentor
 
 ### 참고 링크(LINKS)
 
-- ## 사용한 폰트 (Font Used)
+- 사용한 폰트 (Font Used)
+  - [Rubik](https://fonts.google.com/specimen/Rubik)
 
 ## 작성자(AUTHOR)
 
@@ -43,4 +47,5 @@ The second challenge I started with [Frontend Mentor](https://www.frontendmentor
 
 - [github](https://github.com/User850413)
 - [velog](https://velog.io/@user850413)
+
 # chat_app
