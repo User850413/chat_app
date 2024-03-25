@@ -293,12 +293,3 @@ body {
     display: none;
   }
 }
-
-.num {
-  position: absolute;
-  color: red;
-  z-index: 100;
-  top: 50px;
-  font-size: 2rem;
-  border: 5px solid black;
-}
